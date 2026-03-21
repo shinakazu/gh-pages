@@ -10,13 +10,17 @@ GitHub Pages でホストする静的 Web アプリケーション集です。
 
 GitHub Actions（`.github/workflows/deploy.yml`）で GitHub Pages にデプロイされます。
 
-### 自動デプロイ
+### 初回デプロイ（手動）
 
-`main` ブランチへの push 時に自動でデプロイが実行されます。
+初回はサイトが存在しないため、`workflow_dispatch`（手動実行）でデプロイする必要があります。push だけではデプロイされません。
+
+### push 時の自動デプロイ
+
+`main` ブランチへの push 時、GitHub Pages サイトが既にデプロイ済み（`built` 状態）であれば自動でデプロイが実行されます。サイトが未構築の場合は push してもデプロイされないため、意図せずサイトが公開されることはありません。
 
 ### 手動デプロイ
 
-GitHub Actions の `workflow_dispatch` に対応しているため、手動でもデプロイできます。
+`workflow_dispatch` による手動デプロイはサイトの状態に関係なく常に実行できます。
 
 **GUI から:**
 
