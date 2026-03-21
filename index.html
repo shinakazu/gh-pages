@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gh-pages</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 200;
+      text-align: center;
+      color: #333;
+      margin-bottom: 32px;
+      letter-spacing: 4px;
+    }
+
+    .app-list {
+      list-style: none;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .app-list li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .app-list li:last-child {
+      border-bottom: none;
+    }
+
+    .app-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.2s;
+    }
+
+    .app-list a:hover {
+      background: #fafafa;
+    }
+
+    .app-name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .app-desc {
+      font-size: 14px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .app-arrow {
+      font-size: 20px;
+      color: #ccc;
+      transition: color 0.2s;
+    }
+
+    .app-list a:hover .app-arrow {
+      color: #e06c75;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>gh-pages</h1>
+    <ul class="app-list">
+      <li>
+        <a href="todo/">
+          <div>
+            <div class="app-name">TODO App</div>
+            <div class="app-desc">シンプルな TODO アプリケーション</div>
+          </div>
+          <span class="app-arrow">&rsaquo;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
