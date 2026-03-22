@@ -25,8 +25,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          status=$(gh api repos/${{ github.repository }}/pages --jq '.status' 2>/dev/null || echo "not_found")
-          if [ "$status" = "built" ]; then
+          if gh api repos/${{ github.repository }}/pages --silent 2>/dev/null; then
             echo "active=true" >> "$GITHUB_OUTPUT"
           else
             echo "active=false" >> "$GITHUB_OUTPUT"
