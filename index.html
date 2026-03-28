@@ -85,6 +85,13 @@
     .app-list a:hover .app-arrow {
       color: #e06c75;
     }
+
+    .deploy-time {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 24px;
+    }
   </style>
 </head>
 <body>
@@ -110,6 +117,12 @@
         </a>
       </li>
     </ul>
+    <p class="deploy-time" id="deploy-time"></p>
   </div>
+  <script>
+    const d = new Date(document.lastModified);
+    document.getElementById('deploy-time').textContent =
+      'Deployed: ' + d.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
+  </script>
 </body>
 </html>
